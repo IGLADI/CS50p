@@ -25,3 +25,6 @@ if len(sys.argv) == 1 or len(sys.argv) == 3:
     #     time.sleep(0.5)
     #     print(f)
     #     print(figlet.renderText(text))
+    
+def print_usage():
+    print("Usage: python3 figlet.py [-f FONT]")

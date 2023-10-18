@@ -1,5 +1,6 @@
 import random
 
+
 def main():
     level = get_level()
     score = 0
@@ -27,16 +28,14 @@ def get_level():
         else:
             print("Invalid input.")
 
+
 def generate_integer(level):
     for _ in range(10):
-        if level == 1:
-            return random.randint(0, 9)
-        elif level == 2:
-            return random.randint(10, 99)
-        elif level == 3:
-            return random.randint(100, 999)
+        if level in [1, 2, 3]:
+            return random.randint(10 ** ((level - 1)) if level != 1 else 0, int("9" * level))
         else:
             raise ValueError("Invalid level")
+
 
 if __name__ == "__main__":
     main()
