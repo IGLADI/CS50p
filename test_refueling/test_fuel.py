@@ -1,6 +1,7 @@
 import fuel
 import pytest
 
+
 def test_convert():
     assert fuel.convert("0/4") == 0
     assert fuel.convert("1/2") == 50
@@ -9,6 +10,7 @@ def test_convert():
         fuel.convert("2/0")
     with pytest.raises(ValueError):
         fuel.convert("cat")
+
 
 def test_gauge():
     assert fuel.gauge(0) == "E"
